@@ -1,5 +1,5 @@
-let sourceCurrency='Rub';
-let destinationCurrency='usd';
+let sourceCurrency='RUB';
+let destinationCurrency='USD';
 let amount=0;
 let p=document.querySelectorAll('.currencyreport');
 let sourceAmountInput=document.getElementById('source');
@@ -12,15 +12,19 @@ let destinationUL=uls[1];
 
 let sourceList = Array.from(sourceUL.children);
 let destList = Array.from(destinationUL.children);
-// let selectedSource=sourceList[0];
-// sourceList[0].style.backgroundColor = '#833AE0';
-// sourceList[0].style.color = 'white';
+let selectedSource=sourceList[0];
+sourceList[0].style.backgroundColor = '#833AE0';
+sourceList[0].style.color = 'white';
 
-// destList[1].style.backgroundColor = '#833AE0';
-// destList[1].style.color = 'white';
-// let selectedDest=destList[1];
+destList[1].style.backgroundColor = '#833AE0';
+destList[1].style.color = 'white';
+let selectedDest=destList[1];
 let leftClicked=true;
+let queryy=`http://api.exchangerate.host/convert?from=${sourceCurrency}&to=${destinationCurrency}&amount=1&access_key=${apiKey}`;
+queryReturnerP(queryy,p[0],sourceCurrency,destinationCurrency);
 
+queryy=`http://api.exchangerate.host/convert?from=${destinationCurrency}&to=${sourceCurrency}&amount=1&access_key=${apiKey}`;
+queryReturnerP(queryy,p[1],destinationCurrency,sourceCurrency);
 
 
 sourceList.forEach(x=>{
