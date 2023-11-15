@@ -1,0 +1,1 @@
+http://api.exchangerate.host/convert?from=EUR&to=GBP&amount=100&access_key=c51c4c1f43fcc12c109ce87237dad726

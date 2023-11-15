@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency</title>
     <link rel="stylesheet" href="/proj.css">
-    <link rel="stylesheet" href="/proj.js">
 </head>
 <body>  
     <nav>
@@ -40,14 +39,14 @@
                 <li>GBP</li>
             </ul>
             <div class="inputbox">
-                <input type="text" value="0">
+                <input id="source" type="text" value="0">
                 <p class="currencyreport">1 USD = 73.8896 RUB</p>
                 
                 
             </div>
         </div>
 
-        <div class="changes">
+        <div class="changed">
             <p class="identify">Changed</p>
             <ul>
                 <li>RUB</li>
@@ -56,7 +55,7 @@
                 <li>GBP</li>
             </ul>
             <div class="inputbox">
-                <input type="text" value="0">
+                <input id="dest" type="text" value="0">
                 <p class="currencyreport">1 RUB = 0.0135 USD</p>
                 
                 
@@ -68,6 +67,7 @@
        
          
 
+ <script src="/proj.js"></script>
 
 </body>
 </html>
